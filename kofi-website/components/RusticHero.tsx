@@ -23,6 +23,30 @@ export default function RusticHero() {
     return () => clearInterval(interval);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        type: "spring",
+        stiffness: 70,
+        damping: 15
+      } 
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 pt-24 pb-16 overflow-hidden bg-background">
       
@@ -53,29 +77,38 @@ export default function RusticHero() {
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-background via-transparent to-background/50"></div>
 
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
         className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto"
       >
-        <div className="mb-6 inline-block px-4 py-1.5 border-2 border-foreground rounded-full transform -rotate-2 bg-surface">
+        <motion.div variants={itemVariants} className="mb-6 inline-block px-4 py-1.5 border-2 border-foreground rounded-full transform -rotate-2 bg-surface">
           <span className="font-bold tracking-widest text-sm uppercase text-foreground">{businessInfo.tagline}</span>
-        </div>
+        </motion.div>
 
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-bebas leading-[0.85] text-foreground tracking-normal uppercase drop-shadow-sm mb-6" style={{ fontFamily: 'var(--font-bebas-neue)' }}>
-          PASCHIM VIHAR'S<br />FINEST TAPRI
-        </h1>
+        <motion.h1 variants={itemVariants} className="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-bebas leading-[0.85] text-foreground tracking-normal uppercase drop-shadow-sm mb-6 flex flex-wrap justify-center items-center gap-x-4 gap-y-2" style={{ fontFamily: 'var(--font-bebas-neue)' }}>
+          <span className="w-full text-center">PASCHIM VIHAR'S</span>
+          <span className="relative inline-flex items-center justify-center mx-3 px-6 py-1 mt-2">
+            <span className="absolute inset-0 bg-foreground transform -skew-x-12 skew-y-2 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm shadow-sm z-[-1] scale-105"></span>
+            <span className="absolute inset-0 bg-foreground/60 transform skew-x-6 -skew-y-2 rounded-tr-3xl rounded-bl-3xl rounded-tl-sm rounded-br-sm z-[-2] scale-110 translate-y-1"></span>
+            <span className="relative z-10 text-background font-sans font-black tracking-wide lowercase text-5xl sm:text-6xl md:text-7xl pt-1">झकास</span>
+          </span>
+          <span>CAFE</span>
+        </motion.h1>
 
-        <p className="text-lg sm:text-xl text-foreground font-semibold max-w-2xl mb-10 leading-relaxed shadow-sm drop-shadow-md">
+        <motion.p variants={itemVariants} className="text-lg sm:text-xl text-foreground font-semibold max-w-2xl mb-10 leading-relaxed shadow-sm drop-shadow-md">
           {businessInfo.subheadline}
-        </p>
+        </motion.p>
 
-        <button 
+        <motion.button 
+          variants={itemVariants}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => scrollToSection('menu')}
           className="px-8 py-4 bg-accent text-background font-bold tracking-widest uppercase rounded-sm border-2 border-transparent hover:border-foreground hover:bg-surface hover:text-foreground transition-all duration-300 shadow-[4px_4px_0px_rgba(0,0,0,0.2)] dark:shadow-[4px_4px_0px_rgba(255,255,255,0.1)] active:translate-y-1 active:shadow-[0px_0px_0px_rgba(0,0,0,0)]"
         >
           Check the Menu
-        </button>
+        </motion.button>
       </motion.div>
     </section>
   );

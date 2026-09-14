@@ -1,16 +1,18 @@
 import Navbar from '@/components/Navbar';
 import RusticHero from '@/components/RusticHero';
-import ChalkboardMenu from '@/components/ChalkboardMenu';
+import CategorizedMenu from '@/components/CategorizedMenu';
 import LocationCard from '@/components/LocationCard';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import ParallaxGallery from '@/components/ParallaxGallery';
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <RusticHero />
-      <ChalkboardMenu />
+      <ParallaxGallery />
+      <CategorizedMenu />
       <LocationCard />
       <Footer />
       <ScrollToTop />

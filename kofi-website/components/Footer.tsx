@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border px-6 md:px-10 lg:px-16 py-8 md:py-10">
+    <footer className="border-t border-border bg-foreground text-background px-6 md:px-10 lg:px-16 py-8 md:py-10">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Copyright with Logo */}
         <div className="flex items-center gap-2.5">
@@ -20,19 +20,19 @@ export default function Footer() {
               className="object-cover"
             />
           </div>
-          <p className="text-xs sm:text-sm text-muted">
+          <p className="text-xs sm:text-sm opacity-80">
             &copy; {currentYear} {businessInfo.name}. All rights reserved.
           </p>
         </div>
 
         {/* Cafe Location & Back to Top */}
         <div className="flex items-center gap-6">
-          <span className="text-xs sm:text-sm text-muted">
+          <span className="text-xs sm:text-sm opacity-80">
             Paschim Vihar, New Delhi
           </span>
           <a
             href="#home"
-            className="text-xs sm:text-sm text-muted transition-colors hover:text-foreground"
+            className="text-xs sm:text-sm opacity-80 transition-opacity hover:opacity-100"
           >
             Back to top &uarr;
           </a>
