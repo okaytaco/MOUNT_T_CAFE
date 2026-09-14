@@ -8,51 +8,51 @@ export interface MenuItem {
 
 export const menuItems: MenuItem[] = [
   {
-    id: 'classic-espresso',
-    name: 'Classic Espresso',
+    id: 'kullhad-chai',
+    name: 'Kullhad Chai',
     description:
-      'Rich, full-bodied espresso with a smooth and intense finish.',
-    price: 3.0,
-    image: '/images/menuImg1.png',
+      'Classic masala chai served in an earthen cup for that authentic earthy flavor.',
+    price: 20.0,
+    image: '',
   },
   {
-    id: 'signature-cappuccino',
-    name: 'Signature Cappuccino',
+    id: 'masala-maggi',
+    name: 'Masala Cheese Maggi',
     description:
-      'Bold espresso topped with silky steamed milk and delicate foam.',
-    price: 4.0,
-    image: '/images/menuImg2.png',
+      'Our signature spicy Maggi loaded with veggies and melting cheese.',
+    price: 60.0,
+    image: '',
   },
   {
-    id: 'iced-latte',
-    name: 'Iced Latte',
+    id: 'bun-maska',
+    name: 'Bun Maska',
     description:
-      'Chilled espresso and creamy milk served over ice for a smooth finish.',
-    price: 4.5,
-    image: '/images/menuImg3.png',
+      'Soft bun generously slathered with sweet and salty butter, perfect with chai.',
+    price: 30.0,
+    image: '',
   },
   {
-    id: 'mocha-latte',
-    name: 'Mocha Latte',
+    id: 'samosa',
+    name: 'Punjabi Samosa',
     description:
-      'Rich espresso blended with chocolate and finished with creamy foam.',
-    price: 4.75,
-    image: '/images/menuImg4.png',
+      'Crispy, flaky pastry filled with spiced potato and peas.',
+    price: 15.0,
+    image: '',
   },
   {
-    id: 'iced-mocha',
-    name: 'Iced Mocha',
+    id: 'cold-coffee',
+    name: 'Thick Cold Coffee',
     description:
-      'Cold espresso, chocolate and milk layered over ice for a refreshing treat.',
-    price: 5.0,
-    image: '/images/menuImg5.png',
+      'Classic thick and frothy cold coffee, the perfect summer cooler.',
+    price: 50.0,
+    image: '',
   },
   {
-    id: 'vanilla-cold-brew',
-    name: 'Vanilla Cold Brew',
+    id: 'paneer-sandwich',
+    name: 'Grilled Paneer Sandwich',
     description:
-      'Smooth slow-steeped cold brew with a subtle touch of vanilla.',
-    price: 4.5,
-    image: '/images/menuImg6.png',
+      'Crispy grilled sandwich stuffed with spiced paneer tikka filling.',
+    price: 80.0,
+    image: '',
   },
 ];

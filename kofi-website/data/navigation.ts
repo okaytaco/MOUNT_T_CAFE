@@ -7,8 +7,7 @@ export const navigationLinks: NavLink[] = [
   { label: 'HOME', href: '#home' },
   { label: 'OUR HIGHLIGHTS', href: '#highlights' },
   { label: 'OUR MENU', href: '#menu' },
-  { label: 'CTA', href: '#cta' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'VISIT US', href: '#contact' },
 ];
 
 export interface SocialLink {

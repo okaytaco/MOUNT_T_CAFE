@@ -4,31 +4,31 @@
 /* Default Light Theme (Matches actual site screenshot) */
 :root,
 [data-theme='light'] {
-  --background: #ffffff;
-  --foreground: #111111;
-  --muted: #666666;
-  --border: #e8e8e8;
-  --surface: #f7f7f7;
-  --surface-hover: #eeeeee;
-  --accent: #a06b32;
-  --navbar-bg: rgba(255, 255, 255, 0.85);
-  --card-bg: #ffffff;
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --background: #fdfbf7;
+  --foreground: #3b2f2f;
+  --muted: #8b7355;
+  --border: #e8dcc4;
+  --surface: #f5eedc;
+  --surface-hover: #ebe0c5;
+  --accent: #d2691e;
+  --navbar-bg: rgba(253, 251, 247, 0.85);
+  --card-bg: #fdfbf7;
+  --card-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
 }
 
 /* Dark Theme */
 [data-theme='dark'],
 .dark {
-  --background: #111111;
-  --foreground: #f4f4f4;
-  --muted: #8a8a8a;
-  --border: #282828;
-  --surface: #181818;
-  --surface-hover: #1e1e1e;
-  --accent: #d4a574;
-  --navbar-bg: rgba(17, 17, 17, 0.85);
-  --card-bg: #141414;
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --background: #2b1f1a;
+  --foreground: #f5eedc;
+  --muted: #a69076;
+  --border: #4a3b32;
+  --surface: #362923;
+  --surface-hover: #40322b;
+  --accent: #e59866;
+  --navbar-bg: rgba(43, 31, 26, 0.85);
+  --card-bg: #2b1f1a;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 @theme inline {
