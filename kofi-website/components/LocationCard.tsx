@@ -63,16 +63,24 @@ export default function LocationCard() {
           </div>
         </motion.div>
 
-        {/* Map placeholder Graphic */}
+        {/* Map Embed */}
         <motion.div 
-          className="w-full md:w-1/2 aspect-square md:aspect-[4/5] bg-border flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-muted/40"
+          className="w-full md:w-1/2 aspect-square md:aspect-[4/5] bg-border border-2 border-border relative overflow-hidden"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <MapPin className="w-16 h-16 text-muted mb-4" />
-          <p className="text-muted font-bold tracking-widest uppercase">Map View<br/>(Coming Soon)</p>
+          <iframe 
+            src={`https://maps.google.com/maps?q=${businessInfo.mapQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0 w-full h-full object-cover"
+          ></iframe>
         </motion.div>
       </div>
     </section>
